@@ -12,6 +12,8 @@
     <title>Arcane</title>
   </head>
   <style>
+
+    /* ESTO ES PARA PODER COLOCAR LA FUENTE CON UN ARCHIVO */
     @font-face {
       font-family: "FuenteArcane";
       src: url("Arcane.otf") format("opentype");
@@ -61,12 +63,11 @@
         #7d612c 80%
       );
       text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.416);
-      /* se tiene que utilizar webkit para poder hacer el degradado */
+      /* se tiene que utilizar webkit para poder hacer el degradado, pq en los navegadores no se ve bien */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       margin-top: -5px;
-
     }
 
      .subitulo-arcane {
@@ -82,17 +83,26 @@
      .contenedor-conflicto {
       display: flex;
       justify-content: center;  /* Centra los dos bloques en la pantalla */
-      gap: 300px;              /* Espacio */
+      gap: 250px;              /* Espacio */
       margin-top: 100px;
       padding: 0 50px;
     }
+
+    /* ZONA PILTOVER */
 
     .titulo-piltover {
       color: #00b9e2;
       font-family: "Roboto Condensed", sans-serif;
       font-size: 70px;
       font-weight: 600;
-     margin: 0 0 20px 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+     /* El subrayado */
+    border-bottom: 4px solid rgb(0, 229, 255);
+    line-height: 55px;      /* Reduce el espacio vertical del texto */
+    padding-bottom: 5px;
+     display: inline-block;  /*Es para que mida lo mismo que el titulo */
     }
 
     .parrafo-piltover {
@@ -104,13 +114,21 @@
       margin: 0;
     }
 
+     /* ZONA ZAUN */
     .titulo-zaun {
-      color: #ff004c;
+      color: #fd024e;
       font-family: "Roboto Condensed", sans-serif;
       font-size: 70px;
       font-weight: 600;
-      margin: 0 0 20px 0;
-      text-align: right;
+       margin-bottom: 20px;
+        margin-top: 0;
+ margin-left: 240px; /* tuve que colocar margen para poder colocar bien a la derecha el titulo */
+
+      /* El subrayado */
+      border-bottom: 4px solid #fd024e;
+    line-height: 55px;      /* Reduce el espacio vertical del texto */
+    padding-bottom: 5px; 
+ display: inline-block;
     }
 
     .parrafo-zaun {
@@ -120,14 +138,21 @@
       margin: 0;
       font-size: 20px;
       line-height: 30px;
-      
     }
 
     .piltover, .zaun {
       width: 400px; /* es para definir el ancho del cuadrado
        */
     }
-    
+
+ 
+    /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
+  .divisor {
+  width: 2px; /* ancho */
+  height: 300px;
+  background: linear-gradient(to bottom, #00b9e2c5, #ff004cc2);  /* Degradado de azul a rosa */
+}
+
   </style>
   <body>
     <div class="home">
@@ -145,6 +170,8 @@
           cada innovación es un paso calculado hacia la perfección.
         </p>
       </div>
+
+        <div class="divisor"></div>
 
       <div class="zaun">
         <h2 class="titulo-zaun">ZAUN</h2>
