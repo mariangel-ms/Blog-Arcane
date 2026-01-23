@@ -12,7 +12,6 @@
     <title>Arcane</title>
   </head>
   <style>
-
     /* ESTO ES PARA PODER COLOCAR LA FUENTE CON UN ARCHIVO */
     @font-face {
       font-family: "FuenteArcane";
@@ -24,7 +23,7 @@
     body {
       margin: 0;
       background: #000000;
-      min-height: 300vh;
+      min-height: 250vh;
     }
 
     .home {
@@ -68,24 +67,26 @@
       -webkit-text-fill-color: transparent;
 
       margin-top: -5px;
+      margin-bottom: 0;
+      line-height: 150px;
     }
 
-     .subitulo-arcane {
-      position: absolute;
+    .subitulo-arcane {
+      display: flex;
       font-family: "Lexend", sans-serif;
       color: #f0e5ca;
       font-size: 20px;
       font-weight: 200;
       letter-spacing: 20px;
-      margin-top: 90px;
     }
 
-     .contenedor-conflicto {
+    .contenedor-conflicto {
       display: flex;
-      justify-content: center;  /* Centra los dos bloques en la pantalla */
-      gap: 250px;              /* Espacio */
+      justify-content: center; /* Centra los dos bloques en la pantalla */
+      gap: 250px; /* Espacio */
       margin-top: 100px;
-      padding: 0 50px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     /* ZONA PILTOVER */
@@ -95,14 +96,14 @@
       font-family: "Roboto Condensed", sans-serif;
       font-size: 70px;
       font-weight: 600;
-    margin-bottom: 20px;
-    margin-top: 0;
+      margin-bottom: 20px;
+      margin-top: 0;
 
-     /* El subrayado */
-    border-bottom: 4px solid rgb(0, 229, 255);
-    line-height: 55px;      /* Reduce el espacio vertical del texto */
-    padding-bottom: 5px;
-     display: inline-block;  /*Es para que mida lo mismo que el titulo */
+      /* El subrayado */
+      border-bottom: 4px solid rgb(0, 229, 255);
+      line-height: 55px; /* Reduce el espacio vertical del texto */
+      padding-bottom: 5px;
+      display: inline-block; /*Es para que mida lo mismo que el titulo */
     }
 
     .parrafo-piltover {
@@ -114,44 +115,121 @@
       margin: 0;
     }
 
-     /* ZONA ZAUN */
+    /* ZONA ZAUN */
     .titulo-zaun {
       color: #fd024e;
       font-family: "Roboto Condensed", sans-serif;
       font-size: 70px;
       font-weight: 600;
-       margin-bottom: 20px;
-        margin-top: 0;
- margin-left: 240px; /* tuve que colocar margen para poder colocar bien a la derecha el titulo */
+      margin-bottom: 20px;
+      margin-top: 0;
+      margin-left: 240px; /* tuve que colocar margen para poder colocar bien a la derecha el titulo */
 
       /* El subrayado */
       border-bottom: 4px solid #fd024e;
-    line-height: 55px;      /* Reduce el espacio vertical del texto */
-    padding-bottom: 5px; 
- display: inline-block;
+      line-height: 55px; /* Reduce el espacio vertical del texto */
+      padding-bottom: 5px;
+      display: inline-block;
     }
 
     .parrafo-zaun {
       font-family: "Roboto Condensed", sans-serif;
       color: white;
-    text-align: justify; 
+      text-align: justify;
       margin: 0;
       font-size: 20px;
       line-height: 30px;
     }
 
-    .piltover, .zaun {
+    .piltover,
+    .zaun {
       width: 400px; /* es para definir el ancho del cuadrado
        */
     }
 
- 
     /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
-  .divisor {
-  width: 2px; /* ancho */
-  height: 300px;
-  background: linear-gradient(to bottom, #00b9e2c5, #ff004cc2);  /* Degradado de azul a rosa */
-}
+    .divisor {
+      width: 2px; /* ancho */
+      height: 300px;
+      background: linear-gradient(
+        to bottom,
+        #00b9e2c5,
+        #ff004cc2
+      ); /* Degradado de azul a rosa */
+    }
+
+    h1 {
+      color: #ffffff;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 70px;
+      font-size: 70px;
+      font-weight: 600;
+      margin-top: 100px;
+    }
+
+    /* EXPEDIENTES */
+
+    .titulo-expedientes {
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      .tarjetas {
+      display: flex;
+      gap: 40px;
+      justify-content: center
+    }
+
+    .tarjeta-vi, .tarjeta-jinx, .tarjeta-ekko {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      border: 3px solid #303030;
+      border-radius: 10px;
+      overflow: hidden;    /* ESTO CORRIGE EL BORDE RARO corta la imagen en las esquinas */
+    }
+
+  
+      .titulo-ekko, .titulo-jinx, .titulo-vi{
+      color: #ffffff;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 30px;
+      margin: 0;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .tarjeta-vi img, .tarjeta-jinx img, .tarjeta-ekko img {
+      width: 400px;
+      height: 450px;
+      object-fit: cover;
+      
+    }
+
+    .texto-vi, .texto-jinx, .texto-ekko {
+      color: #ffffff;
+      font-family: "Roboto Condensed", sans-serif;
+      margin-left: 20px; 
+    }
+
+    .tarjeta-vi:hover, .tarjeta-jinx:hover, .tarjeta-ekko:hover {
+      transform: translateY(-10px); /* La tarjeta sube 10 píxeles */
+      background: #000000;
+      border: 3px solid #00a2ff;
+box-shadow: 0px 0px 20px rgba(0, 208, 255, 0.616)
+    }
+
+.tarjeta-vi:hover .titulo-vi { color: #00b9e2; }
+.tarjeta-jinx:hover .titulo-jinx { color:#00a2ff; }
+.tarjeta-ekko:hover .titulo-ekko { color: #00a2ff; }
+
+.tarjeta-vi, .tarjeta-jinx, .tarjeta-ekko {
+      transition: all 0.3s ease;
+    }
+  
+    
 
   </style>
   <body>
@@ -171,10 +249,10 @@
         </p>
       </div>
 
-        <div class="divisor"></div>
+      <div class="divisor"></div>
 
       <div class="zaun">
-        <h2 class="titulo-zaun">ZAUN</h2>
+        <h3 class="titulo-zaun">ZAUN</h3>
         <p class="parrafo-zaun">
           El Distrito Subterráneo es el motor de hierro y neón que nunca duerme.
           Aquí, la Quimtech nace de la necesidad y la urgencia, transformando el
@@ -182,6 +260,42 @@
           supervivencia dicta una evolución sin límites ni permisos.
         </p>
       </div>
+      
     </div>
+
+    <h1 class="titulo-expedientes">EXPEDIENTES</h1>
+
+    <div class="tarjetas">
+      <div class="tarjeta-vi">
+        <img src="vi.jpg" alt="Descripción" width="10%" />
+        <h3 class="titulo-vi">VI</h3>
+        <p class="texto-vi">
+         Una mente brillante fracturada por la tragedia y el Shimmer. Es el símbolo de la rebelión de Zaun,
+         expresando su dolor a través de inventos explosivos y una anarquía visual que busca borrar su pasado como "Powder".
+        </p>
+      </div>
+
+       <div class="tarjeta-jinx">
+        <img src="jinx.jpg" alt="Descripción" width="10%" />
+        <h3 class="titulo-jinx">JINX</h3>
+        <p class="texto-jinx">
+          Antigua líder callejera convertida en Pacificadora de Piltover.
+          Utiliza sus guanteletes Hextech para proteger lo que ama, cargando con
+          el peso del arrepentimiento y la lealtad dividida entre las dos
+          ciudades.
+        </p>
+       </div>
+
+        <div class="tarjeta-ekko">
+        <img src="ekko.jpg" alt="Descripción" width="10%" />
+        <h3 class="titulo-ekko">EKKO</h3>
+        <p class="texto-ekko">
+          Antigua líder callejera convertida en Pacificadora de Piltover.
+          Utiliza sus guanteletes Hextech para proteger lo que ama, cargando con
+          el peso del arrepentimiento y la lealtad dividida entre las dos
+          ciudades.
+        </p>
+    </div>
+
   </body>
 </html>
