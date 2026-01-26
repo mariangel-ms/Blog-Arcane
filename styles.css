@@ -107,6 +107,7 @@ body {
     width: 400px;
     height: 450px;
     object-fit: cover;
+
 }
 
 .parrafo-zaun {
@@ -306,4 +307,3 @@ h1 {
     font-size: 1.2rem;
     opacity: 0.6;
 }
-
