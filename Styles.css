@@ -101,12 +101,23 @@ body {
     margin: 0;
 }
 
-.tarjeta-vi img,
-.tarjeta-jinx img,
-.tarjeta-ekko img {
-    width: 400px;
-    height: 450px;
-    object-fit: cover;
+/* ZONA ZAUN */
+.titulo-zaun {
+    color: #fd024e;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-left: 240px;
+    /* tuve que colocar margen para poder colocar bien a la derecha el titulo */
+
+    /* El subrayado */
+    border-bottom: 4px solid #fd024e;
+    line-height: 55px;
+    /* Reduce el espacio vertical del texto */
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
 .parrafo-zaun {
@@ -300,10 +311,12 @@ h1 {
     color: #00a2ff;
 }
 
-.icono-reproducir {
-    margin-left: auto;
-    color: #ff007a;
-    font-size: 1.2rem;
-    opacity: 0.6;
+.tarjeta-ekko:hover .titulo-ekko {
+    color: #00a2ff;
 }
 
+.tarjeta-vi,
+.tarjeta-jinx,
+.tarjeta-ekko {
+    transition: all 0.3s ease;
+}
