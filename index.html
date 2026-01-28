@@ -15,21 +15,41 @@
 
 <body>
 
-  <div class="barra"></div>
+  <div class="barra">
+<div class="titulo-arcane-barra"> ARCANE </div>
+
+<div id="botones">
+  <nav>
+    <a href="#home">HOME</a>
+  </nav>
+  <nav>
+    <a href="#conflicto">CONFLICTO</a>
+  </nav>
+  <nav>
+    <a href="#expedientes">EXPEDIENTES</a>
+  </nav>
+  <nav>
+    <a href="#resumen">RESUMEN</a>
+  </nav>
+</div>
+
+
+  </div>
   
-  <div class="home">
+  <div id="home" class="home">
     <h1 class="titulo-arcane">ARCANE</h1>
     <h1 class="subitulo-arcane">Piltover & Zaun</h1>
   </div>
 
-  <div class="contenedor-conflicto">
-    <div class="piltover">
+  <div class="margen-general">
+  <div class="contenedor-conflicto" id="conflicto">
+    <div class="piltover" >
       <h2 class="titulo-piltover">PILTOVER</h2>
       <p class="parrafo-piltover">
         La Ciudad del Progreso es el triunfo de la lógica sobre el caos. Aquí,
         la Hextech une la magia y la ciencia para crear un mundo de oro,
         mármol y precisión absoluta. Es el epicentro de la civilización, donde
-        cada innovación es un paso calculado hacia la perfección.
+        cada innovación es un paso calculado hacia la perfección. Bajo sus cúpulas doradas, la ambición se estructura mediante leyes inquebrantables y un diseño superior.
       </p>
     </div>
 
@@ -41,15 +61,15 @@
         El Distrito Subterráneo es el motor de hierro y neón que nunca duerme.
         Aquí, la Quimtech nace de la necesidad y la urgencia, transformando el
         desecho en potencia pura. Es el refugio de los audaces, donde la
-        supervivencia dicta una evolución sin límites ni permisos.
+        supervivencia dicta una evolución sin límites ni permisos. Entre la neblina química y el metal oxidado, el ingenio se forja con lo que la superficie descarta por error.
       </p>
     </div>
   </div>
 
-  <h1 class="titulo-expedientes">EXPEDIENTES</h1>
+  <h1 class="titulo-expedientes" id="expedientes">EXPEDIENTES</h1>
 
   <section class="seccion-tarjetas">
-    <div class="tarjetas">
+    <div class="tarjetas" >
       <div class="tarjeta-vi">
         <img src="vi.jpg" alt="Descripción" width="10%" />
         <h3 class="titulo-vi">VI</h3>
@@ -82,10 +102,10 @@
       </div>
     </div>
   </section>
-
+</div>
   <section class="seccion-resumenes">
     <div class="row-resumen t1-box">
-      <div class="texto-resumen">
+      <div class="texto-resumen" id="resumen">
         <h2>TEMPORADA 1: EL ORIGEN</h2>
         <p class="parrafo-resumen">
           La primera temporada narra el colapso de la inocencia

@@ -1,64 +1,215 @@
 /* ESTO ES PARA PODER COLOCAR LA FUENTE CON UN ARCHIVO */
 @font-face {
-    font-family: "FuenteArcane";
-    src: url("Arcane.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "FuenteArcane";
+  src: url("Arcane.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
     margin: 0;
     background: #000000;
     min-height: 250vh;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  /* Ajusta este valor al alto de tu barra + un extra de cortesía */
+  scroll-padding-top: 150px;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  min-height: 250vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.margen-general {
+  width: 80%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barra {
+  background: #000000ea;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 2px solid rgba(0, 229, 255, 0.3);
+  z-index: 1000;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.titulo-arcane-barra {
+  font-family: "FuenteArcane";
+  font-weight: 1000;
+  letter-spacing: 4px;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+#botones {
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(255, 255, 255);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+#botones a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#botones a:hover {
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    height: 90vh;
-    background-color: #000;
-    background-image:
-        radial-gradient(circle at 15% 50%,
-            rgba(0, 229, 255, 0.2) 0%,
-            transparent 45%),
-        radial-gradient(circle at 85% 50%,
-            rgba(255, 0, 122, 0.2) 0%,
-            transparent 45%);
+  height: 90vh;
+  background-color: #000;
+  background-image:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(0, 229, 255, 0.2) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(255, 0, 122, 0.2) 0%,
+      transparent 45%
+    );
 
-    border-bottom: 2px solid rgba(0, 229, 255, 0.3);
+  border-bottom: 2px solid rgba(0, 229, 255, 0.3);
 }
 
 .titulo-arcane {
-    display: flex;
-    font-family: "FuenteArcane", sans-serif;
-    font-size: 200px;
-    color: rgb(255, 255, 255);
-    letter-spacing: 3px;
-    background: linear-gradient(to bottom,
-            #f0e5ca 20%,
-            #c1a161 50%,
-            #7d612c 80%);
-    text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.416);
-    /* se tiene que utilizar webkit para poder hacer el degradado, pq en los navegadores no se ve bien */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  display: flex;
+  font-family: "FuenteArcane", sans-serif;
+  font-size: 200px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+  background: linear-gradient(to bottom, #f0e5ca 20%, #c1a161 50%, #7d612c 80%);
+  text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.416);
+  /* se tiene que utilizar webkit para poder hacer el degradado, pq en los navegadores no se ve bien */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    margin-top: -5px;
-    margin-bottom: 0;
-    line-height: 150px;
+  margin-top: -5px;
+  margin-bottom: 0;
+  line-height: 150px;
 }
 
 .subitulo-arcane {
-    display: flex;
-    font-family: "Lexend", sans-serif;
-    color: #f0e5ca;
-    font-size: 20px;
-    font-weight: 200;
-    letter-spacing: 20px;
-    margin-top: 0;
+  display: flex;
+  font-family: "Lexend", sans-serif;
+  color: #f0e5ca;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 20px;
+  margin-top: 0;
+}
+
+.contenedor-conflicto {
+  display: flex;
+  justify-content: center; /* Centra los dos bloques en la pantalla */
+  gap: 250px; /* Espacio */
+  margin-top: 100px;
+}
+
+/* ZONA PILTOVER */
+
+.titulo-piltover {
+  color: #00b9e2;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  /* El subrayado */
+  border-bottom: 4px solid rgb(0, 229, 255);
+  line-height: 55px; /* Reduce el espacio vertical del texto */
+  padding-bottom: 5px;
+  display: inline-block; /*Es para que mida lo mismo que el titulo */
+}
+
+.parrafo-piltover {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify; /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
+  margin: 0;
+}
+
+/* ZONA ZAUN */
+.titulo-zaun {
+  color: #fd024e;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  /* El subrayado */
+  border-bottom: 4px solid #fd024e;
+  line-height: 55px; /* Reduce el espacio vertical del texto */
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.parrafo-zaun {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  text-align: justify;
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.piltover {
+  width: 400px; /* es para definir el ancho del cuadrado  */
+  flex: 1;
+}
+
+.zaun {
+  text-align: right;
+  width: 400px;
+  flex: 1;
+}
+/* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
+.divisor {
+  width: 2px; /* ancho */
+  height: 300px;
+  background: linear-gradient(
+    to bottom,
+    #00b9e2c5,
+    #ff004cc2
+  ); /* Degradado de azul a rosa */
 }
 
 .contenedor-conflicto {
@@ -155,6 +306,101 @@ h1 {
     font-weight: 600;
 }
 
+h1 {
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 70px;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.tarjeta-vi,
+.tarjeta-jinx,
+.tarjeta-ekko {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 3px solid #303030;
+  border-radius: 10px;
+  overflow: hidden;
+  /* ESTO CORRIGE EL BORDE RARO */
+
+  flex: 1;
+  max-width: 550px; /* Antes era 400px. Ahora pueden ser mucho más grandes */
+  min-width: 320px; /* Para que en la de tu amigo no se rompan */
+}
+
+.titulo-ekko,
+.titulo-jinx,
+.titulo-vi {
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tarjeta-vi img,
+.tarjeta-jinx img,
+.tarjeta-ekko img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.texto-vi,
+.texto-jinx,
+.texto-ekko {
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  width: 90%;
+  text-align: justify; /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
+
+  margin-left: auto;    
+  margin-right: auto;
+  margin-bottom: 25px;  /* Espacio extra abajo para que no se pegue al borde */
+
+  line-height: 25px;
+}
+
+.tarjeta-vi:hover,
+.tarjeta-jinx:hover,
+.tarjeta-ekko:hover {
+  transform: translateY(-10px);
+  /* La tarjeta sube 10 píxeles */
+  background: #000000;
+  border: 3px solid #00a2ff;
+  box-shadow: 0px 0px 20px rgba(0, 208, 255, 0.616);
+}
+
+.tarjeta-vi:hover .titulo-vi {
+  color: #00b9e2;
+}
+
+.tarjeta-jinx:hover .titulo-jinx {
+  color: #00a2ff;
+}
+
+.tarjeta-ekko:hover .titulo-ekko {
+  color: #00a2ff;
+}
+
+.tarjeta-vi,
+.tarjeta-jinx,
+.tarjeta-ekko {
+  transition: all 0.3s ease;
+}
 
 /*RESUMEN DE TEMPORADA 1 Y 2*/
 
@@ -163,28 +409,32 @@ h1 {
     background-color: #000;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
+  padding: 120px 5%;
+  background-color: #000;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .row-resumen {
-    display: flex;
-    align-items: stretch;
-    /* Hace que imagen y texto tengan la misma altura */
-    margin-bottom: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  /* Hace que imagen y texto tengan la misma altura */
+  margin-bottom: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
 /* Clase para invertir el orden en la Temporada 2 */
 .reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .texto-resumen {
-    flex: 0 0 60%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 0 0 60%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .imagen-resumen {
@@ -195,56 +445,62 @@ h1 {
     min-height: 400px;
     filter: grayscale(0.3) contrast(1.2);
     transition: 0.5s;
+  flex: 0 0 40%;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  filter: grayscale(0.3) contrast(1.2);
+  transition: 0.5s;
 }
 
 .imagen-resumen:hover {
-    filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 /* Colores Temporada 1 - Piltover */
 .t1-box {
-    border-left: 5px solid #00e5ff;
-    box-shadow: -10px 0 20px rgba(0, 229, 255, 0.1);
+  border-left: 5px solid #00e5ff;
+  box-shadow: -10px 0 20px rgba(0, 229, 255, 0.1);
 }
 
 .t1-box h2 {
-    color: #00e5ff;
-    font-size: 40px;
-    margin-bottom: 20px;
+  color: #00e5ff;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 /* Colores Temporada 2 - Zaun */
 .t2-box {
-    border-right: 5px solid #ff007a;
-    box-shadow: 10px 0 20px rgba(255, 0, 122, 0.1);
+  border-right: 5px solid #ff007a;
+  box-shadow: 10px 0 20px rgba(255, 0, 122, 0.1);
 }
 
 .t2-box h2 {
-    color: #ff007a;
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-align: right;
+  color: #ff007a;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: right;
 }
 
 .t2-box p {
-    text-align: right;
+  text-align: right;
 }
 
 .parrafo-resumen {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #cccccc;
-    text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cccccc;
+  text-align: justify;
 }
 
 /* EXPEDIENTES */
 
 .titulo-expedientes {
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
 }
 
 .tarjetas {
@@ -327,23 +583,25 @@ h1 {
 .seccion-soundtrack-inferior {
     background-color: #000000;
     padding: 50px 5%;
+  background-color: #0a0a0a;
+  padding: 50px 5%;
 }
 
 .titulo-musica {
-    font-family: "FuenteArcane", sans-serif;
-    color: #fff;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    letter-spacing: 5px;
-    text-shadow: 0 0 10px #ff007a; /* Brillo rosa Jinx */
+  font-family: "FuenteArcane", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #ff007a; /* Brillo rosa Jinx */
 }
 
 /* La cuadrícula de canciones */
 .grid-musica {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .tarjeta-track {
@@ -361,35 +619,48 @@ h1 {
     transform: translateY(-5px);
     border-color: #ff0000;
     box-shadow: 0px 0px 20px rgb(255, 0, 0)
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: 0.4s ease;
+}
+
+.tarjeta-track:hover {
+  background: rgba(0, 229, 255, 0.1); /* Cambia a azul al pasar el mouse */
+  transform: translateY(-5px);
+  border-color: #00e5ff;
 }
 
 .portada-album {
-    width: 65px;
-    height: 65px;
-    border-radius: 8px;
-    margin-right: 15px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  width: 65px;
+  height: 65px;
+  border-radius: 8px;
+  margin-right: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .info-track h4 {
-    margin: 0;
-    color: #00e5ff;
-    font-size: 1.1rem;
+  margin: 0;
+  color: #00e5ff;
+  font-size: 1.1rem;
 }
 
 .info-track p {
-    margin: 3px 0 0;
-    color: #888;
-    font-size: 0.9rem;
+  margin: 3px 0 0;
+  color: #888;
+  font-size: 0.9rem;
 }
 
 .icono-reproducir {
-    margin-left: auto;
-    color: #ff007a;
-    font-size: 1.2rem;
-    opacity: 0.6;
+  margin-left: auto;
+  color: #ff007a;
+  font-size: 1.2rem;
+  opacity: 0.6;
 }
 
 /* Estilos para que el reproductor sea transparente */
@@ -424,4 +695,160 @@ audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-mute-button {
     filter: invert(100%) sepia(100%) saturate(700%) hue-rotate(280deg); /* Rosa Jinx */
     transform: scale(1.1);
+@media screen and (max-width: 767px) {
+  .home {
+    height: 100vh;
+  }
+
+  .titulo-arcane {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .subitulo-arcane {
+    font-size: 10px;
+    letter-spacing: 10px;
+  }
+
+  .contenedor-conflicto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .titulo-piltover {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 35px;
+  }
+
+  .parrafo-piltover,
+  .parrafo-zaun {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0px;
+  }
+
+  /* ZONA ZAUN */
+  .titulo-zaun {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+
+    /* El subrayado */
+
+    line-height: 35px;
+    padding-bottom: 5px;
+  }
+
+  .piltover,
+  .zaun {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
+  .divisor {
+    width: 60%;
+    height: 2px;
+    margin: 10px auto;
+    background: linear-gradient(to right, #00b9e2c5, #ff004cc2);
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .tarjeta-vi,
+  .tarjeta-jinx,
+  .tarjeta-ekko {
+    width: 85%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .tarjeta-vi img,
+  .tarjeta-jinx img,
+  .tarjeta-ekko img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .titulo-vi,
+  .titulo-jinx,
+  .titulo-ekko {
+    margin-left: 15px;
+    font-size: 24px;
+  }
+
+  .texto-vi,
+  .texto-jinx,
+  .texto-ekko {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+
+  .titulo-expedientes {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  
+  .margen-general {
+    max-width: 1400px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor-conflicto {
+    gap: 60px; 
+  }
+
+  .tarjeta-vi img, 
+  .tarjeta-jinx img, 
+  .tarjeta-ekko img {
+    height: 650px; 
+  }
+
+  .titulo-arcane {
+    font-size: 250px;
+    line-height: 200px;
+  }
+
+  .divisor {
+        height: 350px;
+    }
+}
+
+   @media screen and (min-width: 1000px) and (max-width: 1700px) {
+    .contenedor-conflicto .divisor { 
+        height: 350px !important;
+        background: linear-gradient(to bottom, #00b9e2c5, #ff004cc2) !important;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .contenedor-conflicto {
+    gap: 100px; 
+  }
 }
