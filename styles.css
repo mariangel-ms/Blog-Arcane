@@ -529,8 +529,15 @@ audio::-webkit-media-controls-mute-button {
     height: 100vh;
   }
 
+ .margen-general {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0;
+    margin: 0;
+  }
+
   .titulo-arcane {
-    font-size: 100px;
+  font-size: 100px;
     line-height: 100px;
   }
 
@@ -603,6 +610,7 @@ audio::-webkit-media-controls-mute-button {
     align-items: center;
     gap: 30px;
     width: 100%;
+    margin: 0;
   }
 
   .tarjeta-vi,
@@ -669,14 +677,11 @@ audio::-webkit-media-controls-mute-button {
 }
 
    @media screen and (min-width: 1000px) and (max-width: 1700px) {
-
     .divisor {
         height: 350px;
     }
 }
-
 @media screen and (max-width: 1400px) {
-
     .contenedor-conflicto {
     gap: 100px; 
   }
