@@ -555,21 +555,3 @@ audio::-webkit-media-controls-mute-button {
   .contenedor-conflicto { gap: 100px; }
   .divisor { height: 350px; }
 }
-
-/* Laptops y Monitores Estándar (1000px - 1700px) */
-@media screen and (min-width: 1000px) and (max-width: 1700px) {
-  .contenedor-conflicto {
-    gap: clamp(100px, 15vw, 300px); 
-    margin-top: 80px;
-  }
-  .contenedor-conflicto .divisor { 
-    height: 400px;
-  }
-}
-
-/* Pantallas Grandes y Desktop (Ajuste de margen) */
-@media screen and (max-width: 1400px) {
-  .margen-general {
-    width: 95%;
-  }
-}
