@@ -10,14 +10,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: #000000;
-  min-height: 250vh;
-  overflow-x: hidden;
-  width: 100%;
-}
-
 html {
   overflow-x: hidden;
   width: 100%;
@@ -26,6 +18,13 @@ html {
   scroll-padding-top: 150px;
 }
 
+body {
+  margin: 0;
+  background: #000000;
+  min-height: 250vh;
+  overflow-x: hidden;
+  width: 100%;
+}
 
 .margen-general {
   width: 80%;
@@ -207,17 +206,6 @@ html {
     #00b9e2c5,
     #ff004cc2
   ); /* Degradado de azul a rosa */
-}
-
-/* ZONA PILTOVER */
-
-
-h1 {
-    color: #ffffff;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 70px;
-    font-size: 70px;
-    font-weight: 600;
 }
 
 h1 {
@@ -536,22 +524,160 @@ audio::-webkit-media-controls-mute-button {
 }
 
 /*  MEDIA QUERIES (RESPONSIVE) */
-/* Celulares */
 @media screen and (max-width: 767px) {
-  .titulo-arcane { font-size: 100px; line-height: 100px; }
-  .subitulo-arcane { font-size: 10px; letter-spacing: 10px; }
-  .contenedor-conflicto { flex-direction: column; align-items: center; gap: 40px; }
-  .titulo-piltover, .titulo-zaun { font-size: 50px; line-height: 35px; }
-  .parrafo-piltover, .parrafo-zaun { width: 85%; margin: 0 auto; font-size: 18px; }
-  .zaun { text-align: center; }
-  .divisor { width: 60%; height: 2px; background: linear-gradient(to right, #00b9e2c5, #ff004cc2); }
-  .tarjetas { flex-direction: column; align-items: center; }
-  .tarjeta-vi img, .tarjeta-jinx img, .tarjeta-ekko img { height: 300px; }
+  .home {
+    height: 100vh;
+  }
+
+  .titulo-arcane {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .subitulo-arcane {
+    font-size: 10px;
+    letter-spacing: 10px;
+  }
+
+  .contenedor-conflicto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .titulo-piltover {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 35px;
+  }
+
+  .parrafo-piltover,
+  .parrafo-zaun {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0px;
+  }
+
+  /* ZONA ZAUN */
+  .titulo-zaun {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+
+    /* El subrayado */
+
+    line-height: 35px;
+    padding-bottom: 5px;
+  }
+
+  .piltover,
+  .zaun {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
+  .divisor {
+    width: 60%;
+    height: 2px;
+    margin: 10px auto;
+    background: linear-gradient(to right, #00b9e2c5, #ff004cc2);
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .tarjeta-vi,
+  .tarjeta-jinx,
+  .tarjeta-ekko {
+    width: 85%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .tarjeta-vi img,
+  .tarjeta-jinx img,
+  .tarjeta-ekko img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .titulo-vi,
+  .titulo-jinx,
+  .titulo-ekko {
+    margin-left: 15px;
+    font-size: 24px;
+  }
+
+  .texto-vi,
+  .texto-jinx,
+  .texto-ekko {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+
+  .titulo-expedientes {
+    font-size: 40px;
+  }
 }
 
-/* para las laptops con 1366*/
-@media screen and (min-width: 768px) and (max-width: 1399px) {
-  .margen-general { width: 95%; }
-  .contenedor-conflicto { gap: 100px; }
-  .divisor { height: 350px; }
+@media screen and (min-width: 2500px) {
+  
+  .margen-general {
+    max-width: 1400px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor-conflicto {
+    gap: 60px; 
+  }
+
+  .tarjeta-vi img, 
+  .tarjeta-jinx img, 
+  .tarjeta-ekko img {
+    height: 650px; 
+  }
+
+  .titulo-arcane {
+    font-size: 250px;
+    line-height: 200px;
+  }
+
+  .divisor {
+        height: 350px;
+    }
+}
+
+   @media screen and (min-width: 1000px) and (max-width: 1700px) {
+
+    .divisor {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .contenedor-conflicto {
+    gap: 100px; 
+  }
 }
