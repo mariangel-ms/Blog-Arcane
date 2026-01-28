@@ -607,9 +607,9 @@ h1 {
 }
 
    @media screen and (min-width: 1000px) and (max-width: 1700px) {
-
-    .divisor {
-        height: 350px;
+    .contenedor-conflicto .divisor { 
+        height: 350px !important;
+        background: linear-gradient(to bottom, #00b9e2c5, #ff004cc2) !important;
     }
 }
 
