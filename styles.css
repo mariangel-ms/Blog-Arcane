@@ -602,22 +602,6 @@ h1 {
   }
 }
 
-   @media screen and (min-width: 1000px) and (max-width: 1700px) {
-    .parrafo-piltover, .parrafo-zaun {
-    text-align: justify;
-    hyphens: auto; /* Corta las palabras para que el bloque sea perfecto */
-    -webkit-hyphens: auto;
-    }
-
-.contenedor-conflicto {
-        gap: 100px; 
-    }
-
-    .divisor {
-        height: 350px;
-    }
-}
-
 @media screen and (max-width: 1400px) {
 
     .contenedor-conflicto {
