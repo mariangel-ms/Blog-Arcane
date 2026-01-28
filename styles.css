@@ -6,10 +6,28 @@
     font-style: normal;
 }
 
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Esto es un seguro contra desplazamientos accidentales */
+    width: 100%;
+}
+
 body {
     margin: 0;
     background: #000000;
     min-height: 250vh;
+}
+
+.barra{
+    background-color: rgba(255, 65, 65, 0.812);
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    bottom: 100px;
 }
 
 .home {
@@ -103,7 +121,6 @@ body {
       margin-bottom: 20px;
       margin-top: 0;
 
-
       /* El subrayado */
       border-bottom: 4px solid #fd024e;
       line-height: 55px; /* Reduce el espacio vertical del texto */
@@ -122,7 +139,6 @@ body {
     }
 
     .piltover {
-  
       width: 400px; /* es para definir el ancho del cuadrado
        */
     }
@@ -384,4 +400,117 @@ h1 {
     color: #ff007a;
     font-size: 1.2rem;
     opacity: 0.6;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .home {
+ height: 100vh;
+    }
+
+ .titulo-arcane {
+    font-size: 100px;
+    line-height: 100px;
+ }
+
+ .subitulo-arcane {
+    font-size: 10px;
+    letter-spacing: 10px;
+ }
+
+  .contenedor-conflicto {
+      display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 40px;
+        margin-top: 40px;
+        width: 100%;
+     }
+  
+     .titulo-piltover {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      margin-top: 0;
+      line-height: 35px; 
+ 
+    }
+
+.parrafo-piltover, .parrafo-zaun {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: justify;
+        width: 85%;  
+        margin: 0 auto;     /* margen automático a los lados centra el bloque */
+        letter-spacing: 0px;
+    }
+
+    /* ZONA ZAUN */
+    .titulo-zaun {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      margin-top: 0;
+      justify-content: center;
+      align-items: center;
+
+      /* El subrayado */
+    
+       line-height: 35px;
+      padding-bottom: 5px;
+    }
+    
+    .piltover, .zaun {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
+   .divisor {
+width: 60%; 
+        height: 2px;
+        margin: 10px auto;
+        background: linear-gradient(to right, #00b9e2c5, #ff004cc2);
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: center; 
+        gap: 30px;     
+        width: 100%;
+    }
+
+    .tarjeta-vi,
+    .tarjeta-jinx,
+    .tarjeta-ekko {
+        width: 90%;     
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .tarjeta-vi img,
+    .tarjeta-jinx img,
+    .tarjeta-ekko img {
+        width: 100%;   
+       height: 300px;
+        object-fit: cover;
+    }
+
+    .titulo-vi, .titulo-jinx, .titulo-ekko {
+        margin-left: 15px;
+        font-size: 24px;
+    }
+
+    .texto-vi, .texto-jinx, .texto-ekko {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .titulo-expedientes {
+        font-size: 40px;
+    }
+
 }
